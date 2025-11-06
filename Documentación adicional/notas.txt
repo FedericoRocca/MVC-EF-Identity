@@ -1,1 +1,11 @@
 System.Data.SqlClient -> Paquete NuGet
+
+asp-validation-summary es la validación que se hace en el back.
+asp-validation-summary="All", se valida todo el formulario (puedo sacar las validaciones específicas asp-validation-for) para mostrar un único error, caso contrario
+asp-validation-summary="ModelOnly" se usa únicamente para validar los errores de modelo:
+    if(pokemon.Nombre == "maxi")
+    {
+        ModelState.AddModelError("", "No puede llamarse Maxi");
+    }
+
+Si lo pongo como all y dejo las validaciones de asp-validation-for se validan los campos y los errores se muestran en los campos y en el sumary 
